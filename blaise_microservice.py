@@ -214,7 +214,6 @@ socket = context.socket(zmq.REP)
 socket.bind("tcp://*:5555")
 
 while True:
-    print(len(verb_ing_array))
     # Wait for next request from client
     message = socket.recv_string()
 
