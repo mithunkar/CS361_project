@@ -21,7 +21,7 @@ def get_player_info():
         "rating": playerOvrRating
         }
 
-    return str(playerInfo)
+    return playerInfo
 
 
 context = zmq.Context()
@@ -37,4 +37,4 @@ while True:
     time.sleep(1)
 
     #  Send reply back to client
-    socket.send_string(get_player_info())
+    socket.send_json(get_player_info())
